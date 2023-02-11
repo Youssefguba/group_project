@@ -7,6 +7,7 @@ class Instructor extends Person {
     required this.lessons,
   });
 
+  // Instance Variables
   List<String> lessons;
 
   void addLesson(String lesson) {
@@ -21,5 +22,13 @@ class Instructor extends Person {
 
   void info() {
     print('My name is $name');
+  }
+
+  void set setLessons(List<String> newList) {
+    if (newList.length < 2) {
+      print('You should enter 3 items min');
+    } else {
+      lessons = newList;
+    }
   }
 }

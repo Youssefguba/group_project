@@ -34,4 +34,23 @@ class Group {
       print('Student is ${student.name}');
     }
   }
+
+  void set setInstructorAge(int newAge) {
+    if (newAge <= 25) {
+      instructor.setAge = newAge;
+    }
+  }
+
+  void set setDate(String newDate) {
+    if (newDate == "Friday") {
+      date = newDate;
+    }
+  }
+
+  void set setStudentList(List<Student> listOfStudent) {
+    if (listOfStudent.length >= 5) {
+      this.listOfStudent = listOfStudent;
+    }
+  }
+  
 }

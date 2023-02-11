@@ -7,7 +7,8 @@
         {
             "name": "Dart & Flutter",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "program": "/Users/youssefguba/Desktop/group_project/main.dart"
         }
     ]
 }

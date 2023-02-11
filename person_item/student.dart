@@ -17,4 +17,12 @@ class Student extends Person {
   void info() {
     print('my name is $name');
   }
+
+  void set setFaculty(String newFaculty) {
+    if (newFaculty == 'computer science' ||
+        newFaculty == 'software engineering') {
+      faculty = newFaculty;
+      print('New Faculty is $faculty');
+    }
+  }
 }

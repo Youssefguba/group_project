@@ -1,5 +1,6 @@
 import 'group.dart';
 import 'person_item/instructor.dart';
+import 'person_item/person.dart';
 import 'person_item/student.dart';
 
 void main() {
@@ -22,13 +23,41 @@ void main() {
     date: '2023',
   );
 
-  studentOne.attended();
-  studentOne.attended();
-  studentTwo.attended();
+  // whoIsAttend(student: studentOne);
+  // whoIsAttend(instruct: instructor);
 
-  instructor.addLesson('oop');
-  instructor.showLessons();
+  whoIsAttended(person: studentOne);
+  whoIsAttended(person: instructor);
 
-  group.deleteStudent(studentOne);
-  group.deleteStudent(Student(name: 'Kareem', age: 12));
+  print(studentOne.runtimeType);
+
+  // studentOne.setAge = 36;
+  // studentOne.setEmail = "youssef@yahoo.com";
+  // studentOne.attended();
+  // studentOne.attended();
+  // studentTwo.attended();
+
+  // instructor.addLesson('oop');
+  // instructor.showLessons();
+
+  // group.deleteStudent(studentOne);
+  // group.deleteStudent(Student(name: 'Kareem', age: 12));
+}
+
+void whoIsAttend({
+  Student? student,
+  Instructor? instruct,
+}) {
+  if (student != null) {
+    print('Student attend : ${student.name}');
+  }
+  if (instruct != null) {
+    print('Instructor attended ${instruct.name}');
+  }
+}
+
+void whoIsAttended({Person? person}) {
+  if (person != null) {
+    print('Person is attended : ${person.name}');
+  }
 }
